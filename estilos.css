@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 body {
-    background-color: #E8F9FD;
-    text-align: center
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  text-align: center
   }
   h1 {
     color: #2155CD;
@@ -102,4 +103,21 @@ a:active {
     display: grid;
     grid-template-columns: repeat(3,1fr)
     
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  .zoom {
+    padding: 50px;
+    transition: transform .2s;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); 
   }
