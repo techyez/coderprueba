@@ -69,3 +69,23 @@
     width: 100%;
     padding: 20px;
   }
+section{
+  background-color: aqua;
+  height: 300px;
+  width: 100px;
+
+  article{
+    height: 200px;
+    width: 100px;
+    background-color: orange;
+
+    h2{
+      color: chartreuse;
+      text-align: center;
+    }
+    p{
+      color: crimson;
+    }
+
+  }
+}
