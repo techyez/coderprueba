@@ -1,18 +1,41 @@
-.theme-light .mapbutton {
-  background: #F08080;
-  color: #000;
+$themes: (
+mytheme1: theme-light,
+mytheme2: theme-dark
+);
+@function setStyle($map, $object, $style) {
+@if map-has-key($map, $object) {
+@return map-get(map-get($map, $object), $style);
 }
-.theme-dark .mapbutton {
-  background: #808000;
-  color: #fff;
+@warn "The key ´#{$object} is not present in the map...";
+@return null;
 }
-
+$config: (
+mytheme1: (
+background: #F08080,
+color: #000
+),
+mytheme2: (
+background: #808000,
+color: #fff
+)
+);
 .mapbutton {
-  display: inline-block;
-  text-decoration: none;
-  padding: 2em 3em;
-  border-radius: 0.5em;
-  margin: 0.8em;
+@each $key, $value in $themes {
+@if map-has-key($config, $key) {
+.#{$value} & {
+background: setStyle($config, $key, background);
+color: setStyle($config, $key, color);
 }
-
-/*# sourceMappingURL=sass_map1.css.map */
+} @else {
+@warn "The key ´#{$key} is not defined in the $config map...´"
+}
+}
+}
+// styles for buttons
+.mapbutton {
+display: inline-block;
+text-decoration: none;
+padding: 2em 3em;
+border-radius: .5em;
+margin: .8em;
+}
