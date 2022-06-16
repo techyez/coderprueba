@@ -1,91 +1,102 @@
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #E5DED4;
+  text-align: center
   }
-  body {
-    background: #E5DED4;
-    text-align: center
-    }
-    h1 {
-      color: #150301;
-    }
-    p {
-      color: #ae6e40;
-    }
-    .fotos {
-      border-radius: 500%;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 5px;
-      width: 250px;
-   
-      }
-  footer {
-    text-align: left
+  h1 {
+    color: #150301;
   }
-  .tabla {
+  p {
+    color: #ae6e40;
+  }
+  .fotos {
+    border-radius: 500%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+
+    }
+footer {
+  text-align: left
+}
+.tabla {
+  text-align: center;
+
+}
+a:link {
+  color: #0AA1DD;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a:visited {
+  color: #0AA1DD;
+}
+
+
+a:hover {
+  color: hotpink;
+}
+
+
+a:active {
+  color: #2155CD;
+}
+.item{
+  border: 2px solid #2155CD;
+}
+.subir{
+  height: 40px;
+  width: 40px;
+  background-color: #0AA1DD;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  text-align: center;
+  line-height: 40px; 
+  font-size: 25px; 
+  border-radius: 50%;
+}
+.galeria{
+  height: auto;
+  width: 100%;
+  padding: 20px;
+} 
+
+@mixin mixinprueba {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+.cuidado {
+  @include mixinprueba;
+  background-color: green;
+
+  .button-basic  {
+    border: none;
+    padding: 15px 30px;
     text-align: center;
-  
-  }
-  a:link {
-    color: #0AA1DD;
+    font-size: 16px;
+    cursor: pointer;
   }
   
-  html{
-    scroll-behavior: smooth;
+  .button-report  {
+    @extend .button-basic;
+    background-color: red;
   }
   
-  a:visited {
-    color: #0AA1DD;
-  }
-  
-  
-  a:hover {
-    color: hotpink;
-  }
-  
-  
-  a:active {
-    color: #2155CD;
-  }
-  .item{
-    border: 2px solid #2155CD;
-  }
-  .subir{
-    height: 40px;
-    width: 40px;
-    background-color: #0AA1DD;
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    text-align: center;
-    line-height: 40px; 
-    font-size: 25px; 
-    border-radius: 50%;
-  }
-  .galeria{
-    height: auto;
-    width: 100%;
-    padding: 20px;
-  }
-section{
-  background-color: aqua;
-  height: 300px;
-  width: 100px;
-
-  article{
-    height: 200px;
-    width: 100px;
-    background-color: orange;
-
-    h2{
-      color: chartreuse;
-      text-align: center;
-    }
-    p{
-      color: crimson;
-    }
-
+  .button-submit  {
+    @extend .button-basic;
+    background-color: green;
+    color: white;
   }
 }

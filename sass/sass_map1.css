@@ -1,0 +1,18 @@
+.theme-light .mapbutton {
+  background: #F08080;
+  color: #000;
+}
+.theme-dark .mapbutton {
+  background: #808000;
+  color: #fff;
+}
+
+.mapbutton {
+  display: inline-block;
+  text-decoration: none;
+  padding: 2em 3em;
+  border-radius: 0.5em;
+  margin: 0.8em;
+}
+
+/*# sourceMappingURL=sass_map1.css.map */

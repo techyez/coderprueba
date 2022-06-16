@@ -76,22 +76,26 @@ a:active {
   padding: 20px;
 }
 
-section {
-  background-color: aqua;
-  height: 300px;
-  width: 100px;
+.cuidado {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+  background-color: green;
 }
-section article {
-  height: 200px;
-  width: 100px;
-  background-color: orange;
-}
-section article h2 {
-  color: chartreuse;
+.cuidado .button-basic, .cuidado .button-submit, .cuidado .button-report {
+  border: none;
+  padding: 15px 30px;
   text-align: center;
+  font-size: 16px;
+  cursor: pointer;
 }
-section article p {
-  color: crimson;
+.cuidado .button-report {
+  background-color: red;
+}
+.cuidado .button-submit {
+  background-color: green;
+  color: white;
 }
 
 /*# sourceMappingURL=estilos.css.map */
