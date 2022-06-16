@@ -31,7 +31,6 @@ color: setStyle($config, $key, color);
 }
 }
 }
-// styles for buttons
 .mapbutton {
 display: inline-block;
 text-decoration: none;
