@@ -9,9 +9,11 @@ body {
   }
   h1 {
     color: #150301;
+    text-align: center;
   }
   p {
     color: #ae6e40;
+    text-align: center;
   }
   .fotos {
     border-radius: 500%;
@@ -22,7 +24,7 @@ body {
  
     }
 footer {
-  text-align: left
+  text-align: center
 }
 .tabla {
   text-align: center;
@@ -123,6 +125,16 @@ a:active {
 .containerx {
   background-color: #ae6e40;
 }
+.containerz {
+  font-family: arial;
+  font-size: 24px;
+  margin: 25px;
+  width: 350px;
+  height: 200px;
+  align-content: center;
+  text-align: center;
+}
+
 }
 .fl-wrap {
   float: left;
